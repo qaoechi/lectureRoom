@@ -1,0 +1,35 @@
+@import url("header.css");
+
+@import url("manipulator.css");
+@import url("building.css");
+@import url("classroom.css");
+@import url("editor.css");
+@import url("history.css");
+
+@import url("footer.css");
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#main-container {
+    display: flex;
+    height: 1000px;
+    padding-top: 50px;
+}
+@media screen and (max-width: 768px) {
+    #media-container {
+        width: 10%;
+        height: 100px;
+    }
+}
+
+#mainWrap {
+    width: 100%;
+}

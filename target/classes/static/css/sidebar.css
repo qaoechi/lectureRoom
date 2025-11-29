@@ -1,0 +1,33 @@
+#classroom-sidebar {
+    width: 10%;
+    background-color: black;
+}
+
+#classroom-sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#classroom-sidebar li {
+    /* white-space: nowarp;
+    text-overflow: ellipsis;
+    line-height: 1;
+    overflow: hidden; */
+}
+
+#classroom-sidebar a {
+    display: block;
+    color: white;
+    padding: 6px 4px;
+    text-decoration: none;
+    font-family: 'NanumSquare';
+    font-weight: bold;
+
+}
+
+#classroom-sidebar li:hover a {
+    background-color:darkgray;
+    border-bottom: 1px white solid;
+}
+/* https://me-in-journey.com/entry/HTMLCSS-%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94-%EB%A9%94%EB%89%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%82%98%ED%83%80%EB%82%98%EB%8A%94-2%EC%B0%A8-%EB%A9%94%EB%89%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0-feat-transform-translate */

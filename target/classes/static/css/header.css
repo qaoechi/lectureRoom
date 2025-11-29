@@ -1,0 +1,134 @@
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+#navigation {
+    width: 100%;
+    background-color: rgb(17, 48, 89);
+}
+
+nav > ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    /* padding: 10 0; */
+    list-style: none;
+    gap: 100px;
+}
+nav > ul > li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(17, 48, 89);
+    /* display: block; */
+}
+nav > ul > li {
+    position: relative;
+}
+nav > ul > li a {
+    display: flex;
+    height: 100%;
+    color: rgb(242, 193, 46);
+    align-items: center;
+    justify-content: center;
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    font-size: larger;
+
+}
+nav li > ul {
+    padding: 0;
+    display: none;
+    list-style: none;
+}
+/* #navigation:hover > ul > li > ul {
+    display: block;
+    position: relative;
+    background-color: beige;
+} */
+
+nav > ul > li {
+    flex: 1 1 0;
+}
+nav > ul li:hover {
+    background-color: rgb(93, 90, 191);
+}
+nav > ul > li:hover ul {
+    display: block;
+    /* position: relative; */
+    /* width: 100%; */
+    background-color: azure;
+}
+nav > ul > li:focus-within ul {
+    display: block;
+}
+/* nav > ul > li > ul > li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} */
+
+
+.header__left {
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.header__left a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NanumSquare';
+}
+.header__left > ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header__left:hover > ul {
+    display: block;
+    position: relative;
+}
+
+.header__left li:hover {
+    background-color: rgb(93, 90, 191);
+}
+.header__left:focus-within ul {
+    display: block;
+}
+
+
+@media screen and (min-width: 768px) {
+    #navigation {
+        width: 100%;
+    }
+
+        /* nav > ul {
+        flex-direction: column;
+        gap: 0;
+    } */
+
+    /* hover 무효화 */
+    /* nav > ul li:hover > ul {
+        display: none;
+    } */
+
+    /* 기본은 닫힘 */
+    nav li > ul {
+        display: none;
+        background-color: #eee;
+        padding: 0;
+    }
+
+    /* .open 클래스를 JS에서 붙여서 열기 */
+    nav li.open > ul {
+        display: block;
+        padding: 10px 15px;
+    }
+}

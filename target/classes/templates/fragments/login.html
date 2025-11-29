@@ -1,0 +1,11 @@
+<div th:fragment="login" id="login-main">
+    <h2>로그인</h2>
+    <form th:action="@{/jumjari/member/login}" method="post" th:object="${user}">
+        <label for="nickname">닉네임</label>
+        <input type="text" th:field="*{nickname}">
+        <label for="password">비밀번호</label>
+        <input type="password" th:field="*{password}">
+        <button type="submit">로그인</button>
+    </form>
+    <a th:href="@{/jumjari/member/signup-form}">회원가입</a>
+</div>

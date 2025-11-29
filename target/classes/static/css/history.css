@@ -1,0 +1,43 @@
+#editor-main {
+  width: 99%;
+}
+
+.history-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  max-height: 30%;
+  overflow-y: auto;
+  border: 1px solid black;
+  gap: 10px;
+  cursor: grab;
+}
+
+.history-item {
+  border: 1px solid black;
+  white-space: nowarp;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  
+}
+
+#history {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  max-height: 30%;
+  overflow-y: auto;
+  border: 1px solid black;
+  gap: 10px;
+  cursor: grab;
+}
+
+.doma-item {
+  border: 1px solid black;
+  white-space: nowarp;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  
+}

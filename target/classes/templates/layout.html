@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>점자리</title>
+        <link th:href="@{/css/style.css}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div th:replace="~{fragments/navigation::navigation}"></div>
+            <div class="header__left">
+                <a sec:authorize="isAuthenticated()" th:href="@{/jumjari/member/logout}">☰</a>
+                <a sec:authorize="isAnonymous()" th:href="@{/jumjari/member/login-form}">☰</a>
+                <ul>
+                    <li><a th:href="@{/jumjari/client/profile}">프로필</a></li>
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/jumjari/member/logout}">로그아웃</a>
+                    </li>
+                    <li sec:authorize="isAnonymous()">
+                        <a th:href="@{/jumjari/member/login-form}">로그인</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="main-container">
+            <!-- <aside th:replace="~{fragments/sidebar::${sidebar_fragment}}"></aside> -->
+
+            <div th:if="${main} == building" id="mainWrap">
+                <div th:replace="~{fragments/buildings::buildings}"></div>
+            </div>
+            <div th:if="${main} == classroom" id="mainWrap">
+                <div th:replace="~{fragments/classroom::classroom}"></div>
+            </div>
+            <div th:if="${main} == editor" id="mainWrap">
+                <div th:replace="~{fragments/editor::editor}"></div>
+            </div>
+            <div th:if="${main} == history" id="mainWrap">
+                <div th:replace="~{fragments/history::history}"></div>
+            </div>
+            <div th:if="${main} == schedule" id="mainWrap">
+                <div th:replace="~{fragments/schedule::schedule}"></div>
+            </div>
+            <!-- <div th:replace="~{fragments/classroom::${classroom}}"></div> -->
+            </div>
+        </div>
+        <footer id="footer">
+            푸터
+        </footer>
+    </body>
+</html>

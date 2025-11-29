@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>점자리 회원관리</title>
+        <link th:href="@{/css/member.css}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        </header>
+
+        <div id="main-container">
+
+            <div th:if="${main} == 'signup'" id="mainWrap">
+                <div th:replace="~{fragments/signup :: signup}"></div>
+            </div>
+            <div th:if="${main} == 'login'" id="mainWrap">
+                <div th:replace="~{fragments/login :: login}"></div>
+            </div>
+
+        </div>
+
+        <footer id="footer">
+            푸터
+        </footer>
+    </body>
+</html>

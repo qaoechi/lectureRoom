@@ -1,0 +1,10 @@
+<aside th:fragment="default" id="default-sidebar"></aside>
+
+<aside th:fragment="classroom" id="classroom-sidebar">
+    <ul>
+        <li th:each="building: ${buildings}">
+            <a th:href="@{'/jumjari/client/classroom/' + ${building.engShort}}"
+                th:text="${building.korFull}"></a>
+        </li>
+    </ul>
+</aside>

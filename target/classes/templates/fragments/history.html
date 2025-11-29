@@ -1,0 +1,27 @@
+<main th:fragment="history" id="history-main">
+    <span th:text="${building}" class="now-building">현재 건물</span>
+    <a th:href="@{'/jumjari/client/classroom/' + ${engShort}}" class="go-back">뒤로가기</a>
+
+    <div class="history-list">
+        <span id="imsi">모든 강의실</span>
+        <div th:each="classroom : ${classrooms}"
+            th:text="${classroom.id} + '. ' + ${classroom.room.number} + ' ' + ${classroom.name}"
+            th:data-id="${classroom.id}"
+            class="history-item">
+        </div>
+    </div>
+
+    <div id="history">
+        선택한 강의실 이력
+    </div>
+
+    <script th:inline="javascript">
+        const engShort = /*[[${engShort}]]*/'asd'; //이거 원래 이렇게 하는거임?
+        const classrooms = /*[[${classrooms}]]*/ [];
+        // const rooms = /*[[${roomList}]]*/ [];
+
+        console.log(classrooms);
+    </script>
+    <script th:src="@{/js/general.js}"></script>
+    <script th:src="@{/js/history.js}"></script>
+</main>

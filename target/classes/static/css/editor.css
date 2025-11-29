@@ -1,0 +1,44 @@
+#editor-main {
+  width: 99%;
+}
+
+.room-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  max-height: 30%;
+  overflow-y: auto;
+  border: 1px solid black;
+  gap: 10px;
+  cursor: grab;
+}
+
+.room-item {
+  border: 1px solid black;
+  white-space: nowarp;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  
+}
+.room-item.selected {
+  background-color: bisque;
+  border: 3px solid blue;
+}
+
+#dropZone {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* #editorForm {
+  background-color: brown;
+} */
+
+#editorForm > #building {
+  background-color: aqua;
+}

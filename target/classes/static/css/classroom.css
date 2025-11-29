@@ -1,0 +1,52 @@
+#classroom-main {
+  width: 99%;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+
+.tools {
+  /* border: 1px solid black; */
+  margin-bottom: 10px;
+}
+
+.tools span {
+  margin-right: 30px;
+  font-family: 'NanumSquare';
+  font-weight: bold;
+  /* font-size: xx-large; */
+}
+.tools a {
+  color: black;
+  text-decoration: none;
+}
+
+.status__table {
+  border: 1px #a39485 solid;
+  box-shadow: 0 2px 5px rgba(0,0,0,25); /*.25인지 25인지*/
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.status__table th {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: #73685d;
+  border: 1px solid black;
+}
+.status__table td {
+  /* text-align: center; */
+  /* font-weight: bold; */
+  /* color: #fff; */
+  /* background: #73685d; */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  max-width: 150px;
+  white-space: nowrap;
+  /* white-space: nowarp; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
